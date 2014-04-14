@@ -216,7 +216,7 @@ class MongoEngineUserDatastore(MongoEngineDatastore, UserDatastore):
     def get_user(self, identifier):
         from mongoengine import ValidationError
         try:
-            return self.user_model.objects(id=identifier).first()
+            return self.user_model.objects(email=identifier).first()
         except ValidationError:
             pass
         for attr in get_identity_attributes():
