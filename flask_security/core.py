@@ -150,7 +150,7 @@ _default_forms = {
 
 
 def _user_loader(user_id):
-    return _security.datastore.find_user(id=user_id)
+    return _security.datastore.find_user(user_id=int(user_id))
 
 
 def _token_loader(token):
