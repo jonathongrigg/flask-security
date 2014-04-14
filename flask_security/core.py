@@ -263,7 +263,7 @@ class UserMixin(BaseUserMixin):
 
     def is_active(self):
         """Returns `True` if the user is active."""
-        return self.active
+        return self.is_active
 
     def get_auth_token(self):
         """Returns the user's authentication token."""
