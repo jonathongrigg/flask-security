@@ -327,7 +327,7 @@ def get_token_status(token, serializer, max_age=None):
         invalid = True
 
     if data:
-        user = _datastore.find_user(id=data[0])
+        user = _datastore.find_user(email=data[0])
 
     expired = expired and (user is not None)
     return expired, invalid, user
